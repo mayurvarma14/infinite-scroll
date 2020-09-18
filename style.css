@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+
 html {
   box-sizing: border-box;
 }
@@ -5,6 +7,7 @@ html {
 body {
   margin: 0;
   background: whitesmoke;
+  font-family: 'Squada One', cursive;
 }
 
 h1 {
@@ -29,4 +32,22 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.image-container {
+  margin: 10px 30%;
+}
+
+.image-container img {
+  width: 100%;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+  .image-container {
+    margin: 10px 20px;
+  }
 }

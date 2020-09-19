@@ -4,11 +4,9 @@ const loader = document.getElementById('loader');
 let imagesLoaded = 0;
 let totalImages = 0;
 let photos = [];
-const count = 30;
-const apiKey = `KEY`;
-const apiUrl = `https://api.unsplash.com/photos/random?client_id=${apiKey}&count=${count}`;
 
-async function getPhotos() {
+async function getPhotos(count = 30) {
+  const apiUrl = `https://mproxy-app.herokuapp.com/photos/infinite-scroll?count=${count}`;
   const response = await fetch(apiUrl);
   photos = await response.json();
   displayPhotos();
@@ -57,4 +55,4 @@ window.addEventListener('scroll', () => {
     getPhotos();
   }
 });
-getPhotos();
+getPhotos(6);
